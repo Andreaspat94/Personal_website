@@ -27,23 +27,64 @@
     transition: all 1s;
  }
 
- img {
+ #profile {
     width: 380px;
     height: 380px;
-    border-radius: 80px;
+    border-radius: 50%;
     object-fit: cover;
     float:left;
+    transform: scale(1.2);
+    margin-right: 5%;
+ }
+
+ #circle {
+   width: 150px;
+   height: 150px;
+   
+   /* border-radius: 50px; */
+ }
+
+ .button {
+   border: none;
+   color: white;
+   padding: 35px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 22px;
+   margin: 40px 2px;
+   border-radius: 50%;
+ }
+
+ .button:hover {
+   background-color: #4b576b;
+   transition: all 1s;
+}
+
+ .button-1 {
+   background-color: rgb(24, 200, 200);
+ }
+
+ .button-2 {
+   background-color: rgb(59, 164, 164);
+ }
+
+ .button-3 {
+   background-color: rgb(115, 195, 195);
  }
 
  .main {
-    margin: 10% 30%;
+    margin: 15% 30%;
+    width: 42%;
+    /* border: 5px solid darkblue; */
+    transform: scale(1.1);
  }
  
  .elements {
    display: flex;
-   margin: 10px 10px;
+   margin: 0px 10px;
    padding: 5px 20px 5px 20px;
-   flex-direction: column
+   flex-direction: column;
  }
 
  #hello {
@@ -91,3 +132,6 @@
  .about p {
    margin: 0% 50% 2% 0%;
  }
+
+
+ 
