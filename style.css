@@ -41,7 +41,7 @@
    width: 150px;
    height: 150px;
    
-   /* border-radius: 50px; */
+   border-radius: 50px;
  }
 
  .button {
@@ -52,7 +52,7 @@
    text-decoration: none;
    display: inline-block;
    font-size: 22px;
-   margin: 40px 2px;
+   margin: 20px 2px;
    border-radius: 50%;
  }
 
@@ -101,17 +101,6 @@
    font-size: 20px;
  }
 
- .footer {
-   position:fixed;
-   bottom:60px;
-   width:100%;
- }
-
- .footer-info {
-   display: flex;
-   justify-content: space-around;
- }
-
  hr {
    margin: 10px;
  }
@@ -120,11 +109,108 @@
    margin-top:5px;
  }
 
- .about {
-   margin: 10px 10px;
-   padding: 5% 10%;
+ .about, .projects {
+   margin: 7% 10%;
    font-size: 20px;
  }
+
+ .projects {
+    padding-top:0%;
+    padding-bottom:10%;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    height: 300px;
+ }
+
+ #slide-h3 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+ .slides-container {
+    height: calc(100vh - 2rem);
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+
+ .slide > p {
+  margin-bottom: 20px;
+ }
+
+.slide {
+    width: 100%;
+    height: 100%;
+    /* flex: 1 0 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+#img-slide-1, #img-slide-2, #img-slide-3 {
+  width: 100%;
+  height: 30%;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+/* .slide:nth-child(1) {
+  background-color: #49b293;
+}
+
+.slide:nth-child(2) {
+  background-color: #f1f1f1;
+}
+
+.slide:nth-child(3) {
+  background-color: #6a478f;
+  margin: 0;
+} */
+
+/* .slide:nth-child(4) {
+  background-color: #da6f2b;
+} */
 
  .about h1 {
    margin-bottom: 1%;
@@ -133,5 +219,13 @@
    margin: 0% 50% 2% 0%;
  }
 
+ .footer {
+  position: relative;
+  bottom:60px;
+  width:100%;
+}
 
- 
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+}
