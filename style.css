@@ -5,6 +5,11 @@
     background-color: #dcdee1;
  }
 
+ :root {
+  --grey: #CCC;
+  --magenta: #F06;
+ }
+
  .navbar {
     display:flex;
     justify-content: flex-end;
@@ -73,11 +78,13 @@
    background-color: rgb(115, 195, 195);
  }
 
+ .buttons {
+  display: inline-flex;
+ }
  .main {
     margin: 15% 30%;
     width: 42%;
-    /* border: 5px solid darkblue; */
-    transform: scale(1.1);
+    /* transform: scale(0.7); */
  }
  
  .elements {
@@ -145,7 +152,6 @@
 .slide {
     width: 100%;
     height: 100%;
-    /* flex: 1 0 100%; */
     display: flex;
     flex-direction: column;
 }
@@ -231,6 +237,60 @@
  .credits-li {
   font-size: 20px;
   margin-bottom: 1%;
+ }
+
+ .svg-heart-container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ #heart {
+  width: 150px;
+  stroke: var(--magenta);
+  fill: var(--grey);
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+ }
+
+ #heart.like {
+  animation: 2s ease-in forwards like,
+  0.8s linear 2s 2 forwards beat;
+ }
+
+ #heart.unlike {
+  animation: 2s ease-out forwards unlike;
+ }
+
+ @keyframes like {
+  0% {
+    stroke-dashoffset: 57;
+  }
+
+  70% {
+    stroke-dashoffset: 0;
+    fill: var(--grey);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--magenta);
+  }
+ }
+
+ @keyframes beat {
+  0% {
+    transform: scale(1,1);
+  }
+
+  50% {
+    transform: scale(0.9, 0.9);
+  }
+
+  100% {
+    transform: scale(1,1);
+  }
  }
 
  .footer {
